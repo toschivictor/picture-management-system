@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 
 import { SearchComponent } from './search/search.component';
+import { SortButtonComponent } from './sort-button/sort-button.component';
 
 @NgModule({
   declarations: [
-    SearchComponent
+    SearchComponent,
+    SortButtonComponent
   ],
   exports: [
-    SearchComponent
+    SearchComponent,
+    SortButtonComponent
   ]
 })
 
