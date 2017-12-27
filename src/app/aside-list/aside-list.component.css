@@ -1,0 +1,20 @@
+aside {
+  border-radius: 2px;
+  background: #ffffff;
+  box-shadow:  0 0 2px 0 rgba(0, 0, 0, 0.12);
+  border-style: solid;
+  border-width: 1px;
+  border-image-source: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0));
+}
+
+header {
+  height: 64px;
+  background: #f9f9f9;
+  padding: 0 25px;
+}
+
+h3 {
+  float: left;
+  font-size: 20px;
+  color: #333;
+}
