@@ -8,9 +8,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class SearchComponent {
   @Input() placeholderText = 'Search for users';
-  @Output() typedWord = new EventEmitter();
+  @Output() onTypedWord = new EventEmitter();
 
   onChange(event) {
-    setTimeout(() => this.typedWord.emit(event.target.value), 800);
+    setTimeout(() => this.onTypedWord.emit(event.target.value), 800);
   }
 }
