@@ -3,11 +3,11 @@
     <h3>{{ headerTitle }}</h3>
     <div class="items">
       <sort-button></sort-button>
-      <search></search>
+      <search (onTypedWord)="onSearch($event)"></search>
     </div>
   </header>
 
   <section>
-    <user *ngFor="let user of usersData" [userInfo]="user"></user>
+    <user *ngFor="let user of currentUsersData" [userInfo]="user"></user>
   </section>
 </aside>

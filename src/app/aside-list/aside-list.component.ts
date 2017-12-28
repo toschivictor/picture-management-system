@@ -12,7 +12,8 @@ export class AsideListComponent implements OnInit {
 
   userService: UserService;
 
-  usersData: Object;
+  allUsersData: Object;
+  currentUsersData: any;
 
   constructor(userService: UserService) {
     this.userService = userService;
@@ -20,9 +21,33 @@ export class AsideListComponent implements OnInit {
 
   ngOnInit() {
     this.userService.getUsers().subscribe(
-      response => this.usersData = response,
+      response => {
+        this.currentUsersData = response;
+        this.allUsersData = response;
+      },
       error => console.log(error)
     );
+  }
+
+  onSearch(event) {
+    const users = this.transformObjectToArray(this.allUsersData);
+
+    this.currentUsersData = users.filter(curr =>
+      curr.name.toLowerCase().indexOf(event.toLowerCase()) > -1
+      || curr.username.toLowerCase().indexOf(event.toLowerCase()) > -1
+    );
+
+    return this.currentUsersData;
+  }
+
+  transformObjectToArray(obj) {
+    const newArray = [];
+
+    Object.keys(obj).map(
+      key => newArray.push(obj[key])
+    );
+
+    return newArray;
   }
 
 }
