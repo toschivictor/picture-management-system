@@ -8,6 +8,7 @@
   </header>
 
   <section>
+    <loader *ngIf="isLoading" class="loading"></loader>
     <user *ngFor="let user of currentUsersData" [userInfo]="user"></user>
   </section>
 </aside>

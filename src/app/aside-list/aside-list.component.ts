@@ -15,6 +15,8 @@ export class AsideListComponent implements OnInit {
   allUsersData: Object;
   currentUsersData: any;
 
+  isLoading = true;
+
   constructor(userService: UserService) {
     this.userService = userService;
   }
@@ -22,6 +24,7 @@ export class AsideListComponent implements OnInit {
   ngOnInit() {
     this.userService.getUsers().subscribe(
       response => {
+        this.isLoading = false;
         this.currentUsersData = response;
         this.allUsersData = response;
       },
