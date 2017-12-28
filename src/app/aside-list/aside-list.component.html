@@ -8,6 +8,6 @@
   </header>
 
   <section>
-    <user></user>
+    <user *ngFor="let user of usersData" [userInfo]="user"></user>
   </section>
 </aside>
