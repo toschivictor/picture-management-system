@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UserService } from '../shared/user/user.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { UserService } from '../shared/user/user.service';
 
 export class AsideListComponent implements OnInit {
   @Input() headerTitle: string;
+  @Output() parentData = new EventEmitter();
 
   userService: UserService;
 
@@ -56,5 +57,6 @@ export class AsideListComponent implements OnInit {
 
   onUserSelected(event) {
     this.userId = event;
+    this.parentData.emit(event);
   }
 }
