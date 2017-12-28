@@ -1,0 +1,40 @@
+.box__user {
+  height: 90px;
+  width: 100%;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.54);
+
+  &:hover {
+    color: #fff;
+    background: #26a9e0;
+    transition: all .5s;
+  }
+}
+
+.box__user--context {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 85%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);;
+}
+
+img {
+  max-height: 40px;
+  max-width: 40px;
+  border: 1px solid #eee;
+  border-radius: 10em;
+  margin-right: 15px;
+}
+
+.box__user--data p {
+  margin: 0;
+  padding: 3px;
+  font-size: 13px;
+
+
+  &:first-child {
+    color: rgba(0, 0, 0, 0.87);
+  }
+}
