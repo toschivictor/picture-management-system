@@ -14,6 +14,7 @@ export class AsideListComponent implements OnInit {
 
   allUsersData: Object;
   currentUsersData: any;
+  userId: any;
 
   isLoading = true;
 
@@ -53,4 +54,7 @@ export class AsideListComponent implements OnInit {
     return newArray;
   }
 
+  onUserSelected(event) {
+    this.userId = event;
+  }
 }

@@ -9,6 +9,10 @@
 
   <section>
     <loader *ngIf="isLoading" class="loading"></loader>
-    <user *ngFor="let user of currentUsersData" [userInfo]="user"></user>
+    <user *ngFor="let user of currentUsersData"
+      [userInfo]="user"
+      [userActive]="userId === user.id ? true : false"
+      (onSelectedUser)="onUserSelected($event)">
+    </user>
   </section>
 </aside>

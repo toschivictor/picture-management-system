@@ -10,6 +10,11 @@
     transition: all .5s;
   }
 }
+.active {
+  color: #fff;
+  background: #26a9e0;
+  transition: all .5s;
+}
 
 .box__user--context {
   margin: 0 auto;
