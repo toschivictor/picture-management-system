@@ -8,5 +8,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class UserComponent {
   @Input() userInfo : Object;
+  @Output() onSelectedUser = new EventEmitter();
 
+  onClick(event) {
+    this.onSelectedUser.emit(event);
+  }
 }
