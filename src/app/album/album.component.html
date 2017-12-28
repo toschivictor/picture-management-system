@@ -1,3 +1,16 @@
-<p>
-  album works! {{ userId }}
-</p>
+<section>
+  <header>
+    <h3>Albums</h3>
+
+    <input-checkbox itemValue="select-all" labelValue="Select all"></input-checkbox>
+  </header>
+
+  <h4 *ngIf="!userId">Select an user first</h4>
+
+  <div class="album__list">
+    <div class="album__list--item">
+      <input-checkbox itemValue="select-all" labelValue="Select all"></input-checkbox>
+      <span>1000 Photos</span>
+    </div>
+  </div>
+</section>
