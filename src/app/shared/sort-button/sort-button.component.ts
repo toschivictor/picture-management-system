@@ -3,7 +3,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'sort-button',
   templateUrl: './sort-button.component.html',
-  styleUrls: ['./sort-button.component.css']
+  styleUrls: ['./sort-button.component.scss']
 })
 
 export class SortButtonComponent {
