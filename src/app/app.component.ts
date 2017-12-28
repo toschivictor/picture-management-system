@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  userId: string;
 
-  onUserIdSelected(event) { }
+  onUserIdSelected(event) {
+    this.userId = event;
+  }
 }
