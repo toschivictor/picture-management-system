@@ -1,5 +1,5 @@
 <div class="checkbox-item">
-  <input type="checkbox" name="" id="check-{{ itemValue }}" (change)="onCheck($event)">
+  <input type="checkbox" name="" id="check-{{ itemValue }}" (change)="onCheck($event)" [checked]="isChecked">
   <label for="check-{{ itemValue }}">
     {{ labelValue }}
   </label>

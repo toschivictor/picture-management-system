@@ -2,14 +2,14 @@
   <header>
     <h3>Albums</h3>
 
-    <input-checkbox itemValue="select-all" labelValue="Select all"></input-checkbox>
+    <input-checkbox itemValue="select-all" labelValue="Select all" (onChecked)="onSelectAll($event)"></input-checkbox>
   </header>
 
   <h4 *ngIf="!userId">Select an user first</h4>
 
   <div class="album__list">
-    <div class="album__list--item">
-      <input-checkbox itemValue="select-all" labelValue="Select all"></input-checkbox>
+    <div *ngFor="let album of albums" class="album__list--item">
+      <input-checkbox [isChecked]="selectAllAlbums" [itemValue]="album.id" [labelValue]="album.title | truncate : 20"></input-checkbox>
       <span>1000 Photos</span>
     </div>
   </div>

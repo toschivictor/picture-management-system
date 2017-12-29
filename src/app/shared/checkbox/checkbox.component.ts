@@ -7,6 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class CheckboxComponent {
+  @Input() isChecked = false;
   @Input() itemValue: string;
   @Input() labelValue: string;
   @Output() onChecked = new EventEmitter();

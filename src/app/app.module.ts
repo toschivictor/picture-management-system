@@ -8,11 +8,14 @@ import { AppComponent } from './app.component';
 import { AsideListComponent } from './aside-list/aside-list.component';
 import { SearchComponent } from './shared/search/search.component';
 
+import { TruncatePipe } from './pipes/truncate/truncate.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     AsideListComponent,
     AlbumComponent,
+    TruncatePipe,
   ],
   imports: [
     BrowserModule,
