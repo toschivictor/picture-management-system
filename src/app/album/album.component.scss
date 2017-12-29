@@ -1,5 +1,5 @@
 section {
-  min-height: 250px;
+  min-height: 200px;
   width: 100%;
   background: #fff;
   box-shadow:  0 0 2px 0 rgba(0, 0, 0, 0.12);
@@ -20,13 +20,13 @@ h4 {
   font-size: 20px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.54);
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 .loading {
   display: flex;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 .album__list {
@@ -36,12 +36,6 @@ h4 {
 
 .album__list--item {
   display: flex;
-  width: 272px;
+  width: 195px;
   padding: 25px 0 0 25px;
-}
-
-.album__list--item span {
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.54);
-  padding: 1px 0 0 15px;
 }

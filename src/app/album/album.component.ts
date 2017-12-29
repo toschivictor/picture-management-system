@@ -48,7 +48,6 @@ export class AlbumComponent {
 
       return this.selectedAlbums.emit(ids);
     }
-
   }
 
   onSelectAlbum(isChecked, albumId) {
