@@ -14,6 +14,7 @@ export class AlbumComponent {
 
   albums: Object;
   selectAllAlbums = false;
+  isLoading = false;
 
   albumService: AlbumService;
 
@@ -22,8 +23,13 @@ export class AlbumComponent {
   }
 
   ngOnChanges() {
+    this.isLoading = !this.isLoading;
+
     this.albumService.getSpecificAlbums(this.userId).subscribe(
-      response => this.albums = response,
+      response => {
+        this.isLoading = !this.isLoading;
+        this.albums = response
+      },
       error => console.log(error)
     );
 

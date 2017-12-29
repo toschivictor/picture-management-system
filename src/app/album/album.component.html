@@ -5,9 +5,10 @@
     <input-checkbox itemValue="select-all" labelValue="Select all" [isChecked]="selectAllAlbums" (onChecked)="onSelectAllAlbums($event)"></input-checkbox>
   </header>
 
-  <h4 *ngIf="!userId">Select an user first</h4>
+  <h4 *ngIf="!userId && !isLoading">Select an user first</h4>
+  <loader *ngIf="isLoading" class="loading"></loader>
 
-  <div class="album__list">
+  <div *ngIf="!isLoading" class="album__list">
     <div *ngFor="let album of albums" class="album__list--item">
       <input-checkbox
         [isChecked]="selectAllAlbums"
