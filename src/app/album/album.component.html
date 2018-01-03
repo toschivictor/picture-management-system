@@ -14,7 +14,7 @@
         [isChecked]="selectAllAlbums"
         [itemValue]="album.id"
         [labelValue]="album.title | truncate : 20"
-        (onChecked)="onSelectAlbum($event, album.id)">
+        (onChecked)="onSelectAlbum($event, album.userId, album.id)">
       </input-checkbox>
     </div>
   </div>

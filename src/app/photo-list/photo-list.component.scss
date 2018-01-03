@@ -1,17 +1,16 @@
 section {
-  margin-bottom: 45px;
-  /* min-height: 220px; */
   width: 100%;
   background: #fff;
   box-shadow:  0 0 2px 0 rgba(0, 0, 0, 0.12);
   border-style: solid;
   border-width: 1px;
   border-image-source: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0));
-  padding: 25px 0;
+  padding: 10px 0 25px 0;
 }
 
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding-right: 25px;
 }
@@ -21,22 +20,31 @@ h4 {
   font-size: 20px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.54);
-  padding: 50px;
+  padding: 60px 0 90px;
 }
 
 .loading {
   display: flex;
   justify-content: center;
-  padding: 60px;
+  padding: 60px 0 90px;
 }
 
-.album__list {
-  display: flex;
-  flex-wrap: wrap;
+.photo__list {
+  padding: 0 10px;
 }
 
-.album__list--item {
-  display: flex;
-  width: 195px;
-  padding: 25px 0 0 25px;
+ul {
+  margin: 0;
+  padding: 0 0 0 4px;
+}
+
+li {
+  display: inline-block;
+  margin: 10px;
+}
+
+li p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.87);
 }

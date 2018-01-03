@@ -6,6 +6,7 @@ import { SharedModule } from './shared/shared.module';
 import { AlbumComponent } from './album/album.component';
 import { AppComponent } from './app.component';
 import { AsideListComponent } from './aside-list/aside-list.component';
+import { PhotoListComponent } from './photo-list/photo-list.component';
 import { SearchComponent } from './shared/search/search.component';
 
 import { TruncatePipe } from './pipes/truncate/truncate.pipe';
@@ -15,6 +16,7 @@ import { TruncatePipe } from './pipes/truncate/truncate.pipe';
     AppComponent,
     AsideListComponent,
     AlbumComponent,
+    PhotoListComponent,
     TruncatePipe,
   ],
   imports: [

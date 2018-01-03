@@ -36,24 +36,32 @@ export class AlbumComponent {
     this.selectAllAlbums = false;
   }
 
-  onSelectAllAlbums(selected) {
-    this.selectAllAlbums = selected;
+  onSelectAllAlbums(checked) {
+    this.selectAllAlbums = checked;
 
-    if (selected) {
-      const ids = [];
+    const ids = [];
 
-      for (const prop in this.albums) {
-        ids.push({ albumId: this.albums[prop].id });
-      }
-
-      return this.selectedAlbums.emit(ids);
+    for (const prop in this.albums) {
+      ids.push(
+        {
+          userId: this.albums[prop].userId,
+          albumId: this.albums[prop].id,
+          checked
+        }
+      );
     }
+
+    return this.selectedAlbums.emit(ids);
   }
 
-  onSelectAlbum(isChecked, albumId) {
-    if (isChecked) {
-      return this.selectedAlbums.emit([{ albumId: albumId }]);
-    }
+  onSelectAlbum(status, userId, albumId) {
+    return this.selectedAlbums.emit([
+      {
+        userId: userId,
+        albumId: albumId,
+        checked: status
+      }
+    ]);
   }
 
 }

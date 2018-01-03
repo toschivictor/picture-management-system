@@ -2,7 +2,8 @@
   <aside-list headerTitle="Users" (parentData)="onUserIdSelected($event)" class="aside"></aside-list>
 
   <div class="main-content">
-    <album [userId]="userId"></album>
+    <album [userId]="userId" (selectedAlbums)="onAlbumSelected($event)"></album>
+    <photo-list [albums]="albums"></photo-list>
   </div>
 </section>
 

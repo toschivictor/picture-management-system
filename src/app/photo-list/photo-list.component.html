@@ -1,0 +1,18 @@
+<section>
+  <header>
+    <h3>3 Photos</h3>
+    <sort-button></sort-button>
+  </header>
+
+  <h4 *ngIf="!userId && !isLoading">Select an album first</h4>
+  <loader *ngIf="isLoading" class="loading"></loader>
+
+  <div *ngIf="!isLoading" class="photo__list">
+    <ul>
+      <li *ngFor="let photo of photos">
+        <img src="http://placehold.it/150/8e973b" alt="">
+        <p>Title</p>
+      </li>
+    </ul>
+  </div>
+</section>
